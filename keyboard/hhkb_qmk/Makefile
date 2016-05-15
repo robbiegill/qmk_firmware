@@ -53,10 +53,14 @@ TARGET_DIR = .
 SRC = hhkb_qmk.c \
       matrix.c
 
+ifneq (, $(or $(findstring jp.c, $(SRC)), $(findstring yes, $(HHKB_JP))))
+    OPT_DEFS += -DHHKB_JP
+endif
+
 ifdef KEYMAP
-    SRC := keymaps/keymaps/$(KEYMAP).c $(SRC)
+    SRC := keymaps/$(KEYMAP).c $(SRC)
 else
-    SRC := keymaps/keymaps/default.c $(SRC)
+    SRC := keymaps/default.c $(SRC)
 endif
 
 CONFIG_H = config.h
@@ -121,7 +125,7 @@ MOUSEKEY_ENABLE = yes	# Mouse keys(+4700)
 EXTRAKEY_ENABLE = yes	# Audio control and System control(+450)
 CONSOLE_ENABLE = yes	# Console for debug(+400)
 COMMAND_ENABLE = yes    # Commands for debug and configuration
-CUSTOM_MATRIX    = yes # Custom matrix file for the HHKB
+CUSTOM_MATRIX  = yes # Custom matrix file for the HHKB
 # Do not enable SLEEP_LED_ENABLE. it uses the same timer as BACKLIGHT_ENABLE
 # SLEEP_LED_ENABLE = yes  # Breathing sleep LED during USB suspend
 # NKRO_ENABLE = yes		# USB Nkey Rollover - if this doesn't work, see here: https://github.com/tmk/tmk_keyboard/wiki/FAQ#nkro-doesnt-work
