@@ -40,6 +40,7 @@
 
 # Target file name (without extension).
 TARGET = hhkb_qmk
+HHKB_JP=yes
 
 
 # Directory common source filess exist
