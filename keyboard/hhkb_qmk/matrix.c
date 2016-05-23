@@ -57,7 +57,7 @@ uint8_t matrix_cols(void)
 
 void matrix_init(void)
 {
-#ifdef DEBUG
+#ifdef DEBUG_ENABED
     debug_enable = true;
     debug_keyboard = true;
 #endif

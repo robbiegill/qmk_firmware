@@ -40,8 +40,6 @@
 
 # Target file name (without extension).
 TARGET = hhkb_qmk
-HHKB_JP=yes
-
 
 # Directory common source filess exist
 TOP_DIR = ../..
@@ -54,14 +52,16 @@ TARGET_DIR = .
 SRC = hhkb_qmk.c \
       matrix.c
 
-ifneq (, $(or $(findstring jp.c, $(SRC)), $(findstring yes, $(HHKB_JP))))
-    OPT_DEFS += -DHHKB_JP
-endif
-
 ifdef KEYMAP
     SRC := keymaps/$(KEYMAP).c $(SRC)
+		include keymaps/$(KEYMAP).mk
 else
     SRC := keymaps/default.c $(SRC)
+		include keymaps/default.mk
+endif
+
+ifneq (, $(or $(findstring jp.c, $(SRC)), $(findstring yes, $(HHKB_JP))))
+    OPT_DEFS += -DHHKB_JP
 endif
 
 CONFIG_H = config.h
@@ -144,7 +144,7 @@ VPATH += $(TARGET_DIR)
 VPATH += $(TOP_DIR)
 VPATH += $(TMK_DIR)
 
-debug-on: EXTRAFLAGS += -DDEBUG -DDEBUG_ACTION
+debug-on: EXTRAFLAGS += -DDEBUG_ENABLED -DDEBUG_ACTION
 debug-on: all
 
 debug-off: EXTRAFLAGS += -DNO_DEBUG -DNO_PRINT
