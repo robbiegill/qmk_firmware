@@ -1,1 +1,3 @@
 HHKB_JP=yes
+
+OPT_DEFS += -DEMAIL=\"$(EMAIL)\"
