@@ -1,0 +1,5 @@
+// BACKLIGHT_ENABLE = no
+// MOUSEKEY_ENABLE = no
+// COMMAND_ENABLE = yes
+// CONSOLE_ENABLE = yes
+
