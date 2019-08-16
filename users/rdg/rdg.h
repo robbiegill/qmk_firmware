@@ -38,3 +38,4 @@ enum {
 #define __Z_ROW_10______________________________________________________________________________ KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH
 #define __ARROW_ROW_4_____________________ KC_LEFT, KC_DOWN, KC_UP, KC_RGHT
 #define __VOL_ROW_3______________ KC_VOLD, KC_VOLU, KC_MUTE
+#define __RGB_ROW_9____________________________________________________________________ RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD, RGB_VAI, RGB_VAD, RGB_M_P
