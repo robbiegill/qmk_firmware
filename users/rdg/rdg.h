@@ -28,6 +28,7 @@ enum {
 
 #define LAYOUT_split_space_wrapper(...) LAYOUT_split_space(__VA_ARGS__)
 #define LAYOUT_ca66_wrapper(...) LAYOUT(__VA_ARGS__)
+#define LAYOUT_space65_wrapper(...) LAYOUT(__VA_ARGS__)
 //          1        2        3        4        5        6       7         8        9       10       11       12       13       14       15
 //      _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
 #define __F_ROW_12________________________________________________________________________________________________ KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12
