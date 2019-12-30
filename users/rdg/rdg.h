@@ -26,6 +26,7 @@ enum {
 #define SCRNS3 LGUI(LCTL(LSFT(KC_3)))
 #define SCRNS4 LGUI(LCTL(LSFT(KC_4)))
 
+#define LAYOUT_hhkbjp_wrapper(...) LAYOUT_JP(__VA_ARGS__)
 #define LAYOUT_split_space_wrapper(...) LAYOUT_split_space(__VA_ARGS__)
 #define LAYOUT_ca66_wrapper(...) LAYOUT(__VA_ARGS__)
 #define LAYOUT_space65_wrapper(...) LAYOUT(__VA_ARGS__)

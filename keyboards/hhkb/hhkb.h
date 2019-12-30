@@ -1,5 +1,4 @@
-#ifndef HHKB_H
-#define HHKB_H
+#pragma once
 
 #include "quantum.h"
 
@@ -46,6 +45,3 @@
     { KC_NO, KC_NO, KE2,   KE3,   KE4,   KE5,   KE6,   KC_NO },                \
     { KC_NO, KC_NO, KF2,   KF3,   KF4,   KF5,   KF6,   KC_NO }                 \
 }
-
-
-#endif
